@@ -6,7 +6,7 @@ const UserDetail = async ({ params }) => {
 
   if(id>10)
   {
-    notFound()
+    notFound();
   }
   const res = await axios.get(
     `https://jsonplaceholder.typicode.com/users/${id}`
