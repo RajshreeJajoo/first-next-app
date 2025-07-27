@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { notFound } from "next/navigation";
 const UserDetail = async ({ params }) => {
-  const { id } = params;
+  const { id } = await params;
 
   if(id>10)
   {
