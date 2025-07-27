@@ -1,7 +1,13 @@
 import React from "react";
 import axios from "axios";
+import { notFound } from "next/navigation";
 const UserDetail = async ({ params }) => {
   const { id } = params;
+
+  if(id>10)
+  {
+    notFound()
+  }
   const res = await axios.get(
     `https://jsonplaceholder.typicode.com/users/${id}`
   );
